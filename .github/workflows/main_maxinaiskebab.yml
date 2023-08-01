@@ -30,6 +30,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Lint with black
+        run: |
+          black *.py
+
+
       - name: Test with pytest
         run: pytest tests/test_fast.py
 
